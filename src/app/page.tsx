@@ -365,77 +365,15 @@ const ContactSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--gray-800)] section-title">
             무료 상담 신청
           </h2>
-          <p className="mt-6 text-[var(--gray-600)] text-lg">
-            문의 주시면 빠르게 연락드리겠습니다
-          </p>
         </div>
 
-        <div className="max-w-2xl mx-auto">
-          <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-lg">
-            <div className="mb-6">
-              <label className="block text-[var(--gray-800)] font-semibold mb-2">
-                이름 <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                placeholder="이름을 입력해주세요"
-                className="w-full px-4 py-3 border-2 border-[var(--gray-200)] rounded-xl focus:border-[var(--primary)] focus:outline-none transition-colors"
-              />
-            </div>
-
-            <div className="mb-6">
-              <label className="block text-[var(--gray-800)] font-semibold mb-2">
-                연락처 <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                placeholder="010-0000-0000"
-                className="w-full px-4 py-3 border-2 border-[var(--gray-200)] rounded-xl focus:border-[var(--primary)] focus:outline-none transition-colors"
-              />
-            </div>
-
-            <div className="mb-6">
-              <label className="block text-[var(--gray-800)] font-semibold mb-2">
-                문의 내용 <span className="text-red-500">*</span>
-              </label>
-              <textarea
-                name="inquiry"
-                value={formData.inquiry}
-                onChange={handleChange}
-                required
-                rows={4}
-                placeholder="문의 내용을 입력해주세요"
-                className="w-full px-4 py-3 border-2 border-[var(--gray-200)] rounded-xl focus:border-[var(--primary)] focus:outline-none transition-colors resize-none"
-              />
-            </div>
-
-            {submitResult && (
-              <div
-                className={`mb-6 p-4 rounded-xl ${
-                  submitResult.success
-                    ? "bg-green-100 text-green-800"
-                    : "bg-red-100 text-red-800"
-                }`}
-              >
-                {submitResult.message}
-              </div>
-            )}
-
-            <a
-              href="tel:1600-7398"
-              className="block w-full btn-primary text-white font-bold py-4 rounded-xl text-lg text-center cursor-pointer"
-            >
-              상담하기
-            </a>
-          </form>
+        <div className="max-w-2xl mx-auto text-center">
+          <a
+            href="tel:1600-7398"
+            className="inline-block w-full btn-primary text-white font-bold py-4 rounded-xl text-lg text-center cursor-pointer"
+          >
+            빠른 상담하기
+          </a>
         </div>
       </div>
     </section>
