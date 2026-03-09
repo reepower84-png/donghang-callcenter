@@ -429,28 +429,13 @@ const ContactSection = () => {
               </div>
             )}
 
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full btn-primary text-white font-bold py-4 rounded-xl text-lg disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
-            >
-              {isSubmitting ? "접수 중..." : "상담 신청하기"}
-            </button>
-          </form>
-
-          {/* Direct Contact Info */}
-          <div className="mt-8 text-center">
-            <p className="text-[var(--gray-600)] mb-4">
-              또는 직접 연락주세요
-            </p>
             <a
               href="tel:1600-7398"
-              className="inline-flex items-center gap-2 text-2xl font-bold text-[var(--primary)]"
+              className="block w-full btn-primary text-white font-bold py-4 rounded-xl text-lg text-center cursor-pointer"
             >
-              <span>&#128222;</span>
-              1600-7398
+              상담하기
             </a>
-          </div>
+          </form>
         </div>
       </div>
     </section>
